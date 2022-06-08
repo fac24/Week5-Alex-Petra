@@ -3,8 +3,6 @@ function randomRace() {
     const currentYear = new Date().getFullYear();
     const randomYear = Math.floor(Math.random() * (currentYear - firstYear + 1) + firstYear)
 
-    console.log(randomYear)
-
     return fetch(`http://ergast.com/api/f1/${randomYear}.json`)
         .then((response) => {
             if (!response.ok) {
@@ -42,15 +40,24 @@ function getDrivers() {
         const raceInfo = data["MRData"]["RaceTable"]["Races"][0]
         console.log(raceInfo.season);
         console.log(raceInfo.raceName);
-        // const {'a', 'b', 'c', 'd'} = raceInfo["Results"];
-        // console.log(0)
-        // .map((driver) => {
-        //     console.log(driver["Constructor"]["name"]);
-        //     console.log(driver["Driver"]["givenName"] + " " + driver["Driver"]["familyName"]);
-        //     console.log(driver["position"]);
-        //     console.log(driver["Time"]["millis"]);
-        //     console.log(driver["Time"]["time"]);
-        // })
+
+
+        const [P1, P2, P3, P4] = raceInfo["Results"];
+    
+        const driversInfo = [P1, P2, P3, P4].map((driver) => {
+            let driverObject = {
+                constructor: driver["Constructor"]["name"],
+                driverName: `${driver["Driver"]["givenName"]} ${driver["Driver"]["familyName"]}`,
+                position: driver["position"],
+                timeMillis: driver["Time"]["millis"],
+                time: driver["Time"]["time"]
+            };
+
+            return driverObject;
+        })
+
+        console.log(driversInfo);
+        return driversInfo;
     })
 }
 
