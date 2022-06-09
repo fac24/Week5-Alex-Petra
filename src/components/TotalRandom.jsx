@@ -10,7 +10,7 @@ function TotalRandom(props) {
         const currentYear = new Date().getFullYear();
         const randomYear = Math.floor(Math.random() * (currentYear - firstYear + 1) + firstYear)
     
-       return fetch(`http://ergast.com/api/f1/${randomYear}.json`)
+       return fetch(`https://ergast.com/api/f1/${randomYear}.json`)
             .then((response) => {
                 if (!response.ok) {
                     const error = new Error(response.status);
