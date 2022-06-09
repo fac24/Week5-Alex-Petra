@@ -4,7 +4,7 @@ import './App.css'
 import TotalRandom from "./components/TotalRandom.jsx";
 import Bet from "./components/Bet.jsx";
 import Capital from "./components/Capital.jsx";
-import Result from "./components/Result.jsx";
+// import Result from "./components/Result.jsx";
 import Race from "./components/Race.jsx";
 
 function App() {
@@ -40,7 +40,7 @@ function App() {
           P4_bet={P4_bet}
           setP4_bet={setP4_bet} />
         <section>
-         <Race /> 
+          <Race />
         </section>
       </main>
     </div>
