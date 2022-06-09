@@ -24,13 +24,10 @@ function Bet(props) {
 
                 return driverObject;
             })
-            console.log(27);
-            console.log(driversInfo);
             let shuffled = driversInfo
                 .map(value => ({ value, sort: Math.random() }))
                 .sort((a, b) => a.sort - b.sort)
                 .map(({ value }) => value)
-            console.log(shuffled);
             props.setDrivers(shuffled);
         }
     }, [props.race]);
