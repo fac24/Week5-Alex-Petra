@@ -5,6 +5,7 @@ import TotalRandom from "./components/TotalRandom.jsx";
 import Bet from "./components/Bet.jsx";
 import Capital from "./components/Capital.jsx";
 import Result from "./components/Result.jsx";
+import Race from "./components/Race.jsx";
 
 function App() {
   const [race, setRace] = React.useState(null);
@@ -39,18 +40,7 @@ function App() {
           P4_bet={P4_bet}
           setP4_bet={setP4_bet} />
         <section>
-          {/* <Race /> {/* button that starts the race, animation */}
-          <Result
-            race={race}
-            coin={coin}
-            setCoin={setCoin}
-            drivers={drivers}
-            setDrivers={setDrivers}
-            P1_bet={P1_bet}
-            P2_bet={P2_bet}
-            P3_bet={P3_bet}
-            P4_bet={P4_bet}
-          />
+         <Race /> 
         </section>
       </main>
     </div>
