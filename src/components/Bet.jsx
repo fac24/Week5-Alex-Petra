@@ -24,13 +24,11 @@ function Bet(props) {
 
                 return driverObject;
             })
-            // let randomDrivers = [];
-            // for (let i = 0; i < driversInfo.length; i++) {
-            //     if (randomDrivers.filter(item => !randomDrivers.includes(item))) {
-            //         randomDrivers.push(driversInfo[Math.floor(Math.random() * driversInfo.length)])
-            //     } else { return }
-            // }
-            props.setDrivers(driversInfo)
+            let shuffled = driversInfo
+                .map(value => ({ value, sort: Math.random() }))
+                .sort((a, b) => a.sort - b.sort)
+                .map(({ value }) => value)
+            props.setDrivers(shuffled);
         }
     }, [props.race]);
 
@@ -61,7 +59,7 @@ function Bet(props) {
             {props.drivers.map((driver) => (
                 <li key={driver.driverName}>
                     <p>{driver.driverName == null ? "loading..." : driver.driverName}</p>
-                    <label htmlFor={driver.drivername}></label>
+                    <label htmlFor={driver.driverName}></label>
                     <button id={driver.driverName} data-position={driver.position} onClick={decrement}>Bet 20</button>
                     <p></p>
                 </li>
