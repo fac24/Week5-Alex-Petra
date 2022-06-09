@@ -40,7 +40,16 @@ function App() {
           P4_bet={P4_bet}
           setP4_bet={setP4_bet} />
         <section>
-          <Race />
+          <Race
+            race={race}
+            coin={coin}
+            setCoin={setCoin}
+            drivers={drivers}
+            setDrivers={setDrivers}
+            P1_bet={P1_bet}
+            P2_bet={P2_bet}
+            P3_bet={P3_bet}
+            P4_bet={P4_bet} />
         </section>
       </main>
     </div>

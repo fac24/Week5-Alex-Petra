@@ -1,29 +1,24 @@
 import React from "react";
-import Result from "./Result.jsx";
+// import Result from "./Result.jsx";
 
-function Race() {
+function Race(props) {
+    const [isShown, setIsShown] = React.useState(false);
+    console.log(props);
+    function showResults() {
+        props.setCoin(props.coin + props.P1_bet * 2);
+        setIsShown(true);
 
-    function aa () {
-        return (
-            <Result
-            race={race}
-            coin={coin}
-            setCoin={setCoin}
-            drivers={drivers}
-            setDrivers={setDrivers}
-            P1_bet={P1_bet}
-            P2_bet={P2_bet}
-            P3_bet={P3_bet}
-            P4_bet={P4_bet}
-          />
-        )
     }
 
     return (
         <div>
-            <button></button>
-
-
+            <button onClick={showResults}>Go!</button>
+            {isShown && <div>
+                <h2>Results</h2>
+                <div>{props.drivers.map((driver) =>
+                    driver.position == '1' ? <p key={driver.position}>{driver.driverName} came first!</p> : <p key={driver.position}></p>
+                )}</div>
+            </div>}
         </div>
     )
 }
