@@ -24,13 +24,14 @@ function Bet(props) {
 
                 return driverObject;
             })
-            // let randomDrivers = [];
-            // for (let i = 0; i < driversInfo.length; i++) {
-            //     if (randomDrivers.filter(item => !randomDrivers.includes(item))) {
-            //         randomDrivers.push(driversInfo[Math.floor(Math.random() * driversInfo.length)])
-            //     } else { return }
-            // }
-            props.setDrivers(driversInfo)
+            console.log(27);
+            console.log(driversInfo);
+            let shuffled = driversInfo
+                .map(value => ({ value, sort: Math.random() }))
+                .sort((a, b) => a.sort - b.sort)
+                .map(({ value }) => value)
+            console.log(shuffled);
+            props.setDrivers(shuffled);
         }
     }, [props.race]);
 
