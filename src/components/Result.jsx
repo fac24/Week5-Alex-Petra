@@ -6,7 +6,7 @@ function Result(props) {
         <div>
             <h2>Results</h2>
             <div>{props.drivers.map((driver) =>
-                driver.position == '1' ? <p key={driver.drivername + 'result'}>{driver.drivername} came first!</p> : <p></p>
+                driver.position == '1' ? <p key={driver.driverName + 'result'}>{driver.driverName} came first!</p> : <p></p>
             )}</div>
         </div>
     )

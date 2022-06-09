@@ -60,7 +60,7 @@ function Bet(props) {
             {props.drivers.map((driver) => (
                 <li key={driver.driverName}>
                     <p>{driver.driverName == null ? "loading..." : driver.driverName}</p>
-                    <label htmlFor={driver.drivername}></label>
+                    <label htmlFor={driver.driverName}></label>
                     <button id={driver.driverName} data-position={driver.position} onClick={decrement}>Bet 20</button>
                     <p></p>
                 </li>
