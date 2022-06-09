@@ -9,7 +9,12 @@ import Race from "./components/Race.jsx";
 
 function App() {
   const [race, setRace] = React.useState(null);
-  const [coin, setCoin] = React.useState(100);
+  const [coin, setCoin] = React.useState(() => {
+    const saved = localStorage.getItem("capital");
+    const initialValue = JSON.parse(saved);
+    return initialValue || 100;
+  });
+
   const [drivers, setDrivers] = React.useState();
   const [P1_bet, setP1_bet] = React.useState(0);
   const [P2_bet, setP2_bet] = React.useState(0);
