@@ -11,9 +11,10 @@ function Bet(props) {
         if (props.race) {
             const raceInfo = props.race["MRData"]["RaceTable"]["Races"][0]
             const [P1, P2, P3, P4] = raceInfo["Results"];
-            const driversInfo = [P1, P2, P3, P4].map((driver) => {
+            const driversInfo = [P1, P2, P3, P4].map((driver, index) => {
 
                 let driverObject = {
+                    id: index,
                     constructor: driver["Constructor"]["name"],
                     driverName: `${driver["Driver"]["givenName"]} ${driver["Driver"]["familyName"]}`,
                     position: driver["position"],
