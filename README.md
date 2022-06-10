@@ -30,6 +30,12 @@ Generate a random race and bet on the drivers. Who will come 1st, 2nd, 3rd and 4
 
 ---
 
+## Possible Further Steps
+
+- randomise the race within a year chosen by the user
+- have car animation correspond to winners and losers of race
+- allow user to choose how much to bet
+
 ## Credits
 
 Car images: [Miguel Angel](https://www.vecteezy.com/vector-art/98916-f1-car-vectors)
