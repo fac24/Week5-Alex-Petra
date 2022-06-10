@@ -3,7 +3,7 @@ import './App.css'
 import TotalRandom from "./components/TotalRandom.jsx";
 import Bet from "./components/Bet.jsx";
 import Capital from "./components/Capital.jsx";
-// import Result from "./components/Result.jsx";
+import Result from "./components/Result.jsx";
 import Race from "./components/Race.jsx";
 
 function App() {
@@ -55,6 +55,7 @@ function App() {
           setP4_bet={setP4_bet} 
           isAllBetButtonShown={isAllBetButtonShown}
             setIsAllBetButtonShown={setIsAllBetButtonShown}/>
+          
         <section>
           <Race
             race={race}
@@ -71,6 +72,7 @@ function App() {
             isAllBetButtonShown={isAllBetButtonShown}
             setIsAllBetButtonShown={setIsAllBetButtonShown}
           />
+         
         </section>
       </main>
     </div>

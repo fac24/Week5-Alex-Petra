@@ -3,8 +3,7 @@ import React from "react";
 function Capital(props) {
     return (
         <div id="capital">
-            Coins:
-            {props.coin}</div>
+            <p id="coins">Coins:   {props.coin}</p></div>
     )
 }
 

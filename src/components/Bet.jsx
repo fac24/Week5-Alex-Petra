@@ -63,7 +63,7 @@ function Bet(props) {
         }
     }
 
-    if (!props.drivers) return <div>🏎</div>;
+    if (!props.drivers) return <div></div>;
 
     return (
         <div id="lineup-container">
