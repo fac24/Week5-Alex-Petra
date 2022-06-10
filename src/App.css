@@ -2,10 +2,50 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App-header {
+  background: repeating-conic-gradient(rgb(74, 74, 74) 0% 25%, transparent 0% 50%) 
+              50% / 50px 50px;
+  background-color: rgb(245, 245, 245);
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
+h1 {
+  width: 270px;
+  padding: 0 50px;
+  font-family: 'Faster One', cursive;
+  text-align: center;
+  font-size: calc(28px + 2vmin);
+  letter-spacing: 0.4rem;
+  word-spacing: 9999rem;
+  background: -webkit-linear-gradient(#E215B1, #65A1D4, #9444BA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h1 ~ h1 {
+  word-spacing: unset;
+  display: table-caption;
+}
+
+#title {
+  width:fit-content;
+  background-color: rgba(245, 245, 245, 0.94);
+  margin: 30px 0;
+/*   box-shadow:
+  0 0 0 5px #a9d3f4e6,
+  0 0 0 15px rgba(165, 94, 198, 0.724),
+  0 0 0 20px #e215b281; */
+  border: solid 7px rgb(74, 74, 74);
+  padding: 5px;
+  background-clip: content-box; 
+}
+
+
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -13,16 +53,7 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 20vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+
 
 .App-link {
   color: #61dafb;
@@ -38,5 +69,78 @@
 }
 
 button {
-  font-size: calc(10px + 2vmin);
+  margin: 15px;
+  cursor: pointer;
+  font-family: 'League Gothic', sans-serif;
+  width: 280px;
+  height: 70px;
+  padding: 10px;
+  font-size: calc(12px + 2vmin);
+  color: rgb(74, 74, 74);
+  background-color: white;
+  border: solid 4px #9444BA;
+  padding: 5px;
+  background-clip: content-box; 
+}
+
+button:hover {
+  color: white;
+  background-color: #9444BA;
+  border: solid 4px  rgb(74, 74, 74);
+  padding: 5px;
+  background-clip: content-box; 
+}
+
+
+#season-display {
+  display: block;
+  margin: 20px auto;
+  width: 80vw;
+  height: 100px;
+  background-color: #65a0d4e3;
+  
+}
+
+#year {
+  font-family: 'Racing Sans One', cursive;
+  color: whitesmoke;
+  padding: 30px 0;
+  font-size: calc(20px + 2vmin);
+}
+
+#lineup-container {
+  display: block;
+  margin: 20px auto;
+  width: 80vw;
+  background-color: #9544bad7;
+  color: white;
+}
+
+#lineup-container h2 {
+  font-family: 'Racing Sans One', cursive;
+  color: whitesmoke;
+  padding: 20px 0 0px 0;
+  font-size: calc(20px + 2vmin);
+}
+
+#lineup-container p {
+  font-size: calc(5px + 2vmin);
+  color: #d2e5f5;
+}
+
+#lineup-container li {
+  background-color: ;
+  width: 70vw;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between
+}
+
+#capital {
+  display: block;
+  margin: 20px auto;
+  width: 50vw;
+  height: 100px;
+  background-color: #65a0d4e3;
 }

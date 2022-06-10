@@ -46,7 +46,9 @@ function TotalRandom(props) {
     return (
         <div>
             <button type="submit" onClick={randomRace}>Pick a race for me!</button>
-            <p>{props.race == null ? "loading..." : props.race["MRData"]["RaceTable"]["Races"][0].season}</p>
+            <div id="season-display">
+            <p id="year">{props.race == null ? "Season: " : "Season: " + props.race["MRData"]["RaceTable"]["Races"][0].season}</p>
+            </div>
         </div>
     )
 }

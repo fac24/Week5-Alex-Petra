@@ -24,12 +24,17 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Past & Curious</h1>
+        <div id="title">
+        <h1>PAST 
+          & 
+          CURIOUS</h1>
+          </div>
       </header>
       <main>
+      <Capital coin={coin} />
         <TotalRandom race={race} setRace={setRace} />
         {/* <RandomInYear /> */}
-        <Capital coin={coin} />
+        
         <Bet
           race={race}
           coin={coin}

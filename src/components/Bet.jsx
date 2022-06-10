@@ -55,9 +55,12 @@ function Bet(props) {
     if (!props.drivers) return <div>Loading repos...</div>;
 
     return (
+        <div id="lineup-container">
+            <h2>Lineup</h2>
+            <p>Place your bets!</p>
         <ul>
             {props.drivers.map((driver) => (
-                <li key={driver.driverName}>
+                <li key={driver.driverName} className="drivers">
                     <p>{driver.driverName == null ? "loading..." : driver.driverName}</p>
                     <label htmlFor={driver.driverName}></label>
                     <button id={driver.driverName} data-position={driver.position} onClick={decrement}>Bet 20</button>
@@ -65,6 +68,7 @@ function Bet(props) {
                 </li>
             ))}
         </ul>
+        </div>
     );
 }
 
