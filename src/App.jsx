@@ -1,5 +1,4 @@
 import React from "react";
-// import logo from './logo.svg'
 import './App.css'
 import TotalRandom from "./components/TotalRandom.jsx";
 import Bet from "./components/Bet.jsx";
@@ -21,15 +20,25 @@ function App() {
   const [P3_bet, setP3_bet] = React.useState(0);
   const [P4_bet, setP4_bet] = React.useState(0);
 
+
+
+  const [isGoButtonShown, setIsGoButtonShown] = React.useState(false);
+  const [isAllBetButtonShown, setIsAllBetButtonShown] = React.useState(true);
+
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Past & Curious</h1>
+        <div id="title">
+        <h1>PAST 
+          & 
+          CURIOUS</h1>
+          </div>
       </header>
       <main>
-        <TotalRandom race={race} setRace={setRace} />
+      <Capital coin={coin} />
+        <TotalRandom race={race} setRace={setRace} isGoButtonShown={isGoButtonShown} setIsGoButtonShown={setIsGoButtonShown}/>
         {/* <RandomInYear /> */}
-        <Capital coin={coin} />
+        
         <Bet
           race={race}
           coin={coin}
@@ -43,7 +52,9 @@ function App() {
           P3_bet={P3_bet}
           setP3_bet={setP3_bet}
           P4_bet={P4_bet}
-          setP4_bet={setP4_bet} />
+          setP4_bet={setP4_bet} 
+          isAllBetButtonShown={isAllBetButtonShown}
+            setIsAllBetButtonShown={setIsAllBetButtonShown}/>
         <section>
           <Race
             race={race}
@@ -54,7 +65,12 @@ function App() {
             P1_bet={P1_bet}
             P2_bet={P2_bet}
             P3_bet={P3_bet}
-            P4_bet={P4_bet} />
+            P4_bet={P4_bet} 
+            isGoButtonShown={isGoButtonShown} 
+            setIsGoButtonShown={setIsGoButtonShown}
+            isAllBetButtonShown={isAllBetButtonShown}
+            setIsAllBetButtonShown={setIsAllBetButtonShown}
+          />
         </section>
       </main>
     </div>

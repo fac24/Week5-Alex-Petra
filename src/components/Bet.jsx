@@ -52,19 +52,34 @@ function Bet(props) {
 
     }
 
-    if (!props.drivers) return <div>Loading repos...</div>;
+
+    function displayBets(position) {
+        switch (position) {
+            case "1": return (<p>{props.P1_bet}</p>);
+            case "2": return (<p>{props.P2_bet}</p>);
+            case "3": return (<p>{props.P3_bet}</p>);
+            case "4": return (<p>{props.P4_bet}</p>);
+            default: return "0";
+        }
+    }
+
+    if (!props.drivers) return <div>🏎</div>;
 
     return (
+        <div id="lineup-container">
+            <h2>Lineup</h2>
+            <p>Place your bets!</p>
         <ul>
             {props.drivers.map((driver) => (
-                <li key={driver.driverName}>
+                <li key={driver.driverName} className="drivers">
                     <p>{driver.driverName == null ? "loading..." : driver.driverName}</p>
                     <label htmlFor={driver.driverName}></label>
-                    <button id={driver.driverName} data-position={driver.position} onClick={decrement}>Bet 20</button>
-                    <p></p>
+                    {props.isAllBetButtonShown && <button id={driver.driverName} data-position={driver.position} onClick={decrement}>Bet 20</button>}
+                    {displayBets(driver.position)}
                 </li>
             ))}
         </ul>
+        </div>
     );
 }
 
