@@ -2,9 +2,10 @@ import React from "react";
 // import Bet from "./Bet";
 
 function TotalRandom(props) {
-    // const [race, setRace] =  React.useState(null)
+    const [isPickRaceButtonShown, setIsPickRaceButtonShown] = React.useState(true)
 
     function randomRace() {
+        setIsPickRaceButtonShown(false)
         props.setIsGoButtonShown(true)
         const firstYear = 1950;
         const currentYear = new Date().getFullYear();
@@ -45,9 +46,9 @@ function TotalRandom(props) {
 
     return (
         <div>
-            <button type="submit" onClick={randomRace}>Pick a race for me!</button>
+            {isPickRaceButtonShown && <button type="submit" onClick={randomRace}>Pick a race for me!</button>}
             <div id="season-display">
-            <p id="year">{props.race == null ? "Season: " : "Season: " + props.race["MRData"]["RaceTable"]["Races"][0].season}</p>
+            <p id="year">{props.race == null ? "Season: ?" : "Season: " + props.race["MRData"]["RaceTable"]["Races"][0].season}</p>
             </div>
         </div>
     )

@@ -11,7 +11,8 @@ function Race(props) {
     function showResults() {
         props.setCoin(props.coin + props.P1_bet * 2);
         setIsShown(true);
-        props.setIsGoButtonShown(false)
+        props.setIsGoButtonShown(false);
+        props.setIsAllBetButtonShown(false)
     }
 
     function reset() {

@@ -20,7 +20,10 @@ function App() {
   const [P3_bet, setP3_bet] = React.useState(0);
   const [P4_bet, setP4_bet] = React.useState(0);
 
+
+
   const [isGoButtonShown, setIsGoButtonShown] = React.useState(false);
+  const [isAllBetButtonShown, setIsAllBetButtonShown] = React.useState(true);
 
   return (
     <div className="App">
@@ -49,7 +52,9 @@ function App() {
           P3_bet={P3_bet}
           setP3_bet={setP3_bet}
           P4_bet={P4_bet}
-          setP4_bet={setP4_bet} />
+          setP4_bet={setP4_bet} 
+          isAllBetButtonShown={isAllBetButtonShown}
+            setIsAllBetButtonShown={setIsAllBetButtonShown}/>
         <section>
           <Race
             race={race}
@@ -62,7 +67,10 @@ function App() {
             P3_bet={P3_bet}
             P4_bet={P4_bet} 
             isGoButtonShown={isGoButtonShown} 
-            setIsGoButtonShown={setIsGoButtonShown}/>
+            setIsGoButtonShown={setIsGoButtonShown}
+            isAllBetButtonShown={isAllBetButtonShown}
+            setIsAllBetButtonShown={setIsAllBetButtonShown}
+          />
         </section>
       </main>
     </div>
