@@ -1,7 +1,6 @@
 import React from "react";
 import Positions from "./Positions";
-
-// import Result from "./Result.jsx";
+import Result from "./Result.jsx";
 
 function Race(props) {
     const [isShown, setIsShown] = React.useState(false);
@@ -13,6 +12,7 @@ function Race(props) {
         setIsShown(true);
         props.setIsGoButtonShown(false);
         props.setIsAllBetButtonShown(false)
+        
     }
 
     function reset() {
@@ -25,11 +25,13 @@ function Race(props) {
     }, [props.coin]);
     return (
         <div>
-            { props.isGoButtonShown && <button onClick={showResults}>Lights out and away we go!</button> }
+            { props.isGoButtonShown && <button onClick={showResults} >Lights out and away we go!</button> }
             
-            {isShown && <div>
-                <h2>{props.race !== null ? props.race["MRData"]["RaceTable"]["Races"][0]["raceName"] : ""}</h2>
-                <h3>Results</h3>
+            {isShown && <div id="results">
+            <h2 id="GP">{props.race !== null ? props.race["MRData"]["RaceTable"]["Races"][0]["raceName"] : ""}</h2>
+                <Result />
+        
+                <h3 id="resultDisplay">Results</h3>
                 <Positions drivers={props.drivers}/>
                 <button onClick={reset}>Start a new race!</button>
             </div>}

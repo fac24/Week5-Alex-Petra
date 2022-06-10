@@ -140,7 +140,75 @@ button:hover {
 #capital {
   display: block;
   margin: 20px auto;
-  width: 50vw;
-  height: 100px;
+  width: 30vw;
+  background-color: #9544bad7;
+}
+
+#coins {
+  font-family: 'Racing Sans One', cursive;
+  color: whitesmoke;
+  padding: 20px 0 20px 0;
+  font-size: calc(20px + 2vmin);
+}
+
+
+#container {
+  display: block;
+  margin: 0 auto;
+  width: 800px;
+  height: 500px;
+  border: 5px solid #E215B1;
+  position: relative;
+  background-color: white;
+  background-position: 0 bottom;
+  background-size: contain;
+}
+#car1 {
+  position: absolute;
+  width: 100px;
+  bottom: 400px;
+  left: 2px;
+}
+
+#car2 {
+  position: absolute;
+  width: 100px;
+  bottom: 300px;
+  left: 2px;
+}
+
+#car3 {
+  position: absolute;
+  width: 100px;
+  bottom: 200px;
+  left: 2px;
+}
+
+#car4 {
+  position: absolute;
+  width: 100px;
+  bottom: 100px;
+  left: 2px;
+}
+
+#results {
+  color: white;
+  display: block;
+  margin: 20px auto;
+  padding: 30px 0;
+  width: 80vw;
   background-color: #65a0d4e3;
+}
+
+#GP {
+  font-size: calc(20px + 2vmin);
+  color:#9444BA;
+}
+
+#resultDisplay {
+  font-size: calc(20px + 2vmin);
+}
+
+#positions {
+  font-size: calc(5px + 2vmin);
 }

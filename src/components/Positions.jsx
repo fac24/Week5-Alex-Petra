@@ -13,7 +13,7 @@ function Positions(props) {
     )}
 
     return(
-        <div>
+        <div id="positions">
         <div>{pos(1)}</div>
         <div>{pos(2, "2nd")}</div>
         <div>{pos(3, "3rd")}</div>
