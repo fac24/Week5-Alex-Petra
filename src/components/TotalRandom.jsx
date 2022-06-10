@@ -5,7 +5,7 @@ function TotalRandom(props) {
     // const [race, setRace] =  React.useState(null)
 
     function randomRace() {
-
+        props.setIsGoButtonShown(true)
         const firstYear = 1950;
         const currentYear = new Date().getFullYear();
         const randomYear = Math.floor(Math.random() * (currentYear - firstYear + 1) + firstYear)

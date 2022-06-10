@@ -1,5 +1,4 @@
 import React from "react";
-// import logo from './logo.svg'
 import './App.css'
 import TotalRandom from "./components/TotalRandom.jsx";
 import Bet from "./components/Bet.jsx";
@@ -21,6 +20,8 @@ function App() {
   const [P3_bet, setP3_bet] = React.useState(0);
   const [P4_bet, setP4_bet] = React.useState(0);
 
+  const [isGoButtonShown, setIsGoButtonShown] = React.useState(false);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -32,7 +33,7 @@ function App() {
       </header>
       <main>
       <Capital coin={coin} />
-        <TotalRandom race={race} setRace={setRace} />
+        <TotalRandom race={race} setRace={setRace} isGoButtonShown={isGoButtonShown} setIsGoButtonShown={setIsGoButtonShown}/>
         {/* <RandomInYear /> */}
         
         <Bet
@@ -59,7 +60,9 @@ function App() {
             P1_bet={P1_bet}
             P2_bet={P2_bet}
             P3_bet={P3_bet}
-            P4_bet={P4_bet} />
+            P4_bet={P4_bet} 
+            isGoButtonShown={isGoButtonShown} 
+            setIsGoButtonShown={setIsGoButtonShown}/>
         </section>
       </main>
     </div>

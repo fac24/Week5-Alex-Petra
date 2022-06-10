@@ -52,7 +52,7 @@ function Bet(props) {
 
     }
 
-    if (!props.drivers) return <div>Loading repos...</div>;
+    if (!props.drivers) return <div>🏎</div>;
 
     return (
         <div id="lineup-container">
